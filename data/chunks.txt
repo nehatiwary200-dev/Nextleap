@@ -1,0 +1,107 @@
+================================================================================
+HDFC MUTUAL FUND FAQ - CHUNKED DATA
+Generated: 2026-09-30 15:28:52 UTC
+Total chunks: 20
+Chunk size: 200 words, Overlap: 30 words
+================================================================================
+
+[chunk_0000] HDFC Large Cap Fund Direct Growth | Overview
+Source: https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+Text: HDFC Large Cap Fund Direct Growth is a Equity - Large Cap mutual fund scheme. Risk level: Very High. NAV: ₹1,189.08 (25 Sep 2026). Fund size (AUM): ₹39,933.37 Cr. Expense ratio: 1.03%. Rating: 4. Minimum SIP: ₹100. Minimum Lumpsum: ₹100.
+--------------------------------------------------------------------------------
+
+[chunk_0001] HDFC Large Cap Fund Direct Growth | Exit Load & Tax
+Source: https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+Text: Exit load for HDFC Large Cap Fund Direct Growth: 1% if redeemed within 1 year. Stamp duty on investment: 0.005% (from July 1, 2020). Tax implication: If redeemed within one year, returns are taxed at 20%. If redeemed after one year, returns exceeding ₹1.25 lakh in a financial year are taxed at 12.5%.
+--------------------------------------------------------------------------------
+
+[chunk_0002] HDFC Large Cap Fund Direct Growth | Fund Management
+Source: https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+Text: Fund managers of HDFC Large Cap Fund Direct Growth: Rahul Baijal (Jul 2022 - Present). Education: PGDM(MBA) from IIM Calcutta, Engineering graduate from Delhi College of Engineering. Dhruv Muchhal (Jun 2023 - Present). Education: B.Com, CA, CFA.
+--------------------------------------------------------------------------------
+
+[chunk_0003] HDFC Large Cap Fund Direct Growth | About
+Source: https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+Text: About HDFC Large Cap Fund Direct Growth: The scheme seeks to provide long-term capital appreciation/income by investing predominantly in Large-Cap companies. Benchmark: NIFTY 100 Total Return Index. Scheme Information Document (SID): https://www.hdfcfund.com.
+--------------------------------------------------------------------------------
+
+[chunk_0004] HDFC Flexi Cap Direct Plan Growth | Overview
+Source: https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+Text: HDFC Flexi Cap Direct Plan Growth is a Equity - Flexi Cap mutual fund scheme. Risk level: Very High. NAV: ₹2,214.57 (25 Sep 2026). Fund size (AUM): ₹1,13,606.47 Cr. Expense ratio: 0.77%. Rating: 5. Minimum SIP: ₹100. Minimum Lumpsum: ₹100.
+--------------------------------------------------------------------------------
+
+[chunk_0005] HDFC Flexi Cap Direct Plan Growth | Exit Load & Tax
+Source: https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+Text: Exit load for HDFC Flexi Cap Direct Plan Growth: 1% if redeemed within 1 year. Stamp duty on investment: 0.005% (from July 1, 2020). Tax implication: If redeemed within one year, returns are taxed at 20%. If redeemed after one year, returns exceeding ₹1.25 lakh in a financial year are taxed at 12.5%.
+--------------------------------------------------------------------------------
+
+[chunk_0006] HDFC Flexi Cap Direct Plan Growth | Fund Management
+Source: https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+Text: Fund managers of HDFC Flexi Cap Direct Plan Growth: Dhruv Muchhal (Jun 2023 - Present). Education: B.Com, CA, CFA. Amit Ganatra (Feb 2026 - Present). Education: Commerce degree, Chartered Accountant, CFA from AIMR.
+--------------------------------------------------------------------------------
+
+[chunk_0007] HDFC Flexi Cap Direct Plan Growth | About
+Source: https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+Text: About HDFC Flexi Cap Direct Plan Growth: The scheme seeks to generate capital appreciation / income from a portfolio, predominantly invested in equity & equity related instruments. Benchmark: NIFTY 500 Total Return Index. Scheme Information Document (SID): https://www.hdfcfund.com.
+--------------------------------------------------------------------------------
+
+[chunk_0008] HDFC ELSS Tax Saver Fund Direct Plan Growth | Overview
+Source: https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+Text: HDFC ELSS Tax Saver Fund Direct Plan Growth is a Equity - ELSS mutual fund scheme. Risk level: Very High. NAV: ₹1,447.38 (25 Sep 2026). Fund size (AUM): ₹15,991.78 Cr. Expense ratio: 1.21%. Rating: 5. Minimum SIP: ₹500. Minimum Lumpsum: ₹500.
+--------------------------------------------------------------------------------
+
+[chunk_0009] HDFC ELSS Tax Saver Fund Direct Plan Growth | Exit Load & Tax
+Source: https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+Text: Exit load for HDFC ELSS Tax Saver Fund Direct Plan Growth: Nil. Stamp duty on investment: 0.005% (from July 1, 2020). Tax implication: If redeemed within one year, returns are taxed at 20%. If redeemed after one year, returns exceeding ₹1.25 lakh in a financial year are taxed at 12.5%.
+--------------------------------------------------------------------------------
+
+[chunk_0010] HDFC ELSS Tax Saver Fund Direct Plan Growth | Fund Management
+Source: https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+Text: Fund managers of HDFC ELSS Tax Saver Fund Direct Plan Growth: Amar Kalkundrikar (Dec 2025 - Present). Education: B.Com, CA, CFA, MBA from Columbia Business School. Dhruv Muchhal (Jun 2023 - Present). Education: B.Com, CA, CFA.
+--------------------------------------------------------------------------------
+
+[chunk_0011] HDFC ELSS Tax Saver Fund Direct Plan Growth | About
+Source: https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+Text: About HDFC ELSS Tax Saver Fund Direct Plan Growth: The scheme seeks to generate capital appreciation / income from a portfolio, comprising predominantly of equity & equity related instruments. Benchmark: NIFTY 500 Total Return Index. Scheme Information Document (SID): https://www.hdfcfund.com. Lock-in period: 3 years (ELSS mandatory lock-in).
+--------------------------------------------------------------------------------
+
+[chunk_0012] HDFC Small Cap Fund Direct Growth | Overview
+Source: https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+Text: HDFC Small Cap Fund Direct Growth is a Equity - Small Cap mutual fund scheme. Risk level: Very High. NAV: ₹159.82 (25 Sep 2026). Fund size (AUM): ₹41,890.86 Cr. Expense ratio: 0.78%. Rating: 3. Minimum SIP: ₹100. Minimum Lumpsum: ₹100.
+--------------------------------------------------------------------------------
+
+[chunk_0013] HDFC Small Cap Fund Direct Growth | Exit Load & Tax
+Source: https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+Text: Exit load for HDFC Small Cap Fund Direct Growth: 1% if redeemed within 1 year. Stamp duty on investment: 0.005% (from July 1, 2020). Tax implication: If redeemed within one year, returns are taxed at 20%. If redeemed after one year, returns exceeding ₹1.25 lakh in a financial year are taxed at 12.5%.
+--------------------------------------------------------------------------------
+
+[chunk_0014] HDFC Small Cap Fund Direct Growth | Fund Management
+Source: https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+Text: Fund managers of HDFC Small Cap Fund Direct Growth: Dhruv Muchhal (Jun 2023 - Present). Education: B.Com, CA, CFA. Chirag Setalvad (Jun 2014 - Present). Education: B.Sc, MBA from University of North Carolina.
+--------------------------------------------------------------------------------
+
+[chunk_0015] HDFC Small Cap Fund Direct Growth | About
+Source: https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+Text: About HDFC Small Cap Fund Direct Growth: The scheme seeks to provide long-term capital appreciation / income by investing predominantly in Small-Cap companies. Benchmark: BSE 250 SmallCap Total Return Index. Scheme Information Document (SID): https://www.hdfcfund.com.
+--------------------------------------------------------------------------------
+
+[chunk_0016] HDFC Balanced Advantage Fund Direct Growth | Overview
+Source: https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth
+Text: HDFC Balanced Advantage Fund Direct Growth is a Hybrid - Dynamic Asset Allocation mutual fund scheme. Risk level: Very High. NAV: ₹557.73 (25 Sep 2026). Fund size (AUM): ₹1,07,295.79 Cr. Expense ratio: 0.78%. Rating: 5. Minimum SIP: ₹100. Minimum Lumpsum: ₹100.
+--------------------------------------------------------------------------------
+
+[chunk_0017] HDFC Balanced Advantage Fund Direct Growth | Exit Load & Tax
+Source: https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth
+Text: Exit load for HDFC Balanced Advantage Fund Direct Growth: 1% for units in excess of 15% of the investment if redeemed within 1 year. Stamp duty on investment: 0.005% (from July 1, 2020). Tax implication: If redeemed within one year, returns are taxed at 20%. If redeemed after one year, returns exceeding ₹1.25 lakh in a financial year are taxed at 12.5%.
+--------------------------------------------------------------------------------
+
+[chunk_0018] HDFC Balanced Advantage Fund Direct Growth | Fund Management
+Source: https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth
+Text: Fund managers of HDFC Balanced Advantage Fund Direct Growth: Anil Bamboli (Jul 2022 - Present). Education: CFA from AIMR, Masters in Management Studies (Finance), Graduate in Cost and Works Accountant from ICWAI. Arun Agarwal (Oct 2022 - Present). Education: B.Com, Chartered Accountant. Dhruv Muchhal (Jun 2023 - Present). Education: B.Com, CA, CFA.
+--------------------------------------------------------------------------------
+
+[chunk_0019] HDFC Balanced Advantage Fund Direct Growth | About
+Source: https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth
+Text: About HDFC Balanced Advantage Fund Direct Growth: The scheme seeks to generate capital appreciation / income from a portfolio, comprising predominantly of equity & equity related instruments with dynamic asset allocation between equity and debt. Benchmark: NIFTY 500 Total Return Index. Scheme Information Document (SID): https://www.hdfcfund.com.
+--------------------------------------------------------------------------------
+
