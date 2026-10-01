@@ -132,69 +132,60 @@ def retrieve_chunks(
     question: str,
     top_k: int = TOP_K,
 ) -> list[dict[str, Any]]:
-    """Retrieve relevant chunks from ChromaDB."""
+    """Retrieve relevant chunks using lightweight keyword matching.
 
-    collection = get_collection()
+    This avoids loading SentenceTransformer/PyTorch during API requests,
+    which is safer for small cloud instances.
+    """
+    chunks_path = CHUNKS_TXT_PATH
 
-    count = collection.count()
+    if not chunks_path.exists():
+        raise RuntimeError(f"Chunk data not found: {chunks_path}")
 
-    if count == 0:
-        return []
+    text = chunks_path.read_text(encoding="utf-8")
+    blocks = [b.strip() for b in text.split("-" * 80) if b.strip()]
 
-    requested_k = max(1, min(top_k, count))
+    chunks = []
 
-    # Vector search
-    results = collection.query(
-        query_texts=[question],
-        n_results=requested_k,
-        include=["documents", "metadatas", "distances"],
-    )
+    for block in blocks:
+        lines = block.splitlines()
 
-    documents = (results.get("documents") or [[]])[0]
-    metadatas = (results.get("metadatas") or [[]])[0]
-    distances = (results.get("distances") or [[]])[0]
+        if not lines:
+            continue
 
-    chunks: list[dict[str, Any]] = []
+        header = lines[0]
+        source_url = ""
+        content = block
 
-    for index, document in enumerate(documents):
-        metadata = (
-            metadatas[index]
-            if index < len(metadatas)
-            else {}
-        )
+        for line in lines:
+            if line.startswith("Source:"):
+                source_url = line[len("Source:"):].strip()
+            elif line.startswith("Text:"):
+                content = line[len("Text:"):].strip()
 
-        distance = (
-            distances[index]
-            if index < len(distances)
-            else None
-        )
+        parts = header.split(" | ", 1)
+        scheme_name = parts[0].strip()
+        section = parts[1].strip() if len(parts) > 1 else "Unknown"
 
-        chunks.append(
-            {
-                "text": document,
-                "metadata": metadata,
-                "distance": distance,
-                "keyword_score": _keyword_score(
-                    question,
-                    document,
-                ),
-            }
-        )
+        score = _keyword_score(question, content)
 
-    # Exact keyword relevance helps questions such as:
-    # "What is the fund size?"
-    # "What is the benchmark?"
-    # "What is the expense ratio?"
+        chunks.append({
+            "text": content,
+            "metadata": {
+                "scheme_name": scheme_name,
+                "section": section,
+                "source_url": source_url,
+            },
+            "distance": None,
+            "keyword_score": score,
+        })
+
     chunks.sort(
-        key=lambda chunk: (
-            chunk["keyword_score"],
-            -(chunk["distance"] or 999),
-        ),
+        key=lambda chunk: chunk["keyword_score"],
         reverse=True,
     )
 
-    return chunks[:requested_k]
-
+    return chunks[:max(1, min(top_k, len(chunks)))]
 
 def build_prompt(
     question: str,
