@@ -9,11 +9,10 @@ from functools import lru_cache
 from typing import Any
 
 import chromadb
-from chromadb.utils import embedding_functions
 from groq import Groq
 
 try:
-    from .config import CHROMA_PERSIST_DIR, EMBEDDING_MODEL, GROQ_MODEL, TOP_K
+    from .config import CHROMA_PERSIST_DIR, GROQ_MODEL, TOP_K
 except ImportError:
     from config import CHROMA_PERSIST_DIR, EMBEDDING_MODEL, GROQ_MODEL, TOP_K
 
@@ -76,7 +75,7 @@ def _normalise_url(url: str) -> str:
 
 @lru_cache(maxsize=1)
 def get_collection():
-    """Open the persisted Chroma collection once per process."""
+    """Open the persisted Chroma collection without loading a local ML model."""
 
     if not CHROMA_PERSIST_DIR.exists():
         raise RuntimeError(
@@ -86,16 +85,9 @@ def get_collection():
 
     client = chromadb.PersistentClient(path=str(CHROMA_PERSIST_DIR))
 
-    embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
-        model_name=EMBEDDING_MODEL
+    return client.get_collection(
+        name="hdfc_mutual_funds"
     )
-
-    return client.get_or_create_collection(
-        name="hdfc_mutual_funds",
-        embedding_function=embedding_fn,
-        metadata={"hnsw:space": "cosine"},
-    )
-
 
 def is_opinionated(question: str) -> bool:
     """Return True when a question is explicitly advice-seeking."""
@@ -132,53 +124,40 @@ def retrieve_chunks(
     question: str,
     top_k: int = TOP_K,
 ) -> list[dict[str, Any]]:
-    """Retrieve relevant chunks using lightweight keyword matching.
+    """Retrieve stored FAQ chunks using lightweight keyword matching."""
 
-    This avoids loading SentenceTransformer/PyTorch during API requests,
-    which is safer for small cloud instances.
-    """
-    chunks_path = CHUNKS_TXT_PATH
+    collection = get_collection()
 
-    if not chunks_path.exists():
-        raise RuntimeError(f"Chunk data not found: {chunks_path}")
+    data = collection.get(
+        include=["documents", "metadatas"]
+    )
 
-    text = chunks_path.read_text(encoding="utf-8")
-    blocks = [b.strip() for b in text.split("-" * 80) if b.strip()]
+    documents = data.get("documents") or []
+    metadatas = data.get("metadatas") or []
 
-    chunks = []
+    if not documents:
+        return []
 
-    for block in blocks:
-        lines = block.splitlines()
+    chunks: list[dict[str, Any]] = []
 
-        if not lines:
-            continue
+    for index, document in enumerate(documents):
+        metadata = (
+            metadatas[index]
+            if index < len(metadatas)
+            else {}
+        )
 
-        header = lines[0]
-        source_url = ""
-        content = block
-
-        for line in lines:
-            if line.startswith("Source:"):
-                source_url = line[len("Source:"):].strip()
-            elif line.startswith("Text:"):
-                content = line[len("Text:"):].strip()
-
-        parts = header.split(" | ", 1)
-        scheme_name = parts[0].strip()
-        section = parts[1].strip() if len(parts) > 1 else "Unknown"
-
-        score = _keyword_score(question, content)
-
-        chunks.append({
-            "text": content,
-            "metadata": {
-                "scheme_name": scheme_name,
-                "section": section,
-                "source_url": source_url,
-            },
-            "distance": None,
-            "keyword_score": score,
-        })
+        chunks.append(
+            {
+                "text": document,
+                "metadata": metadata or {},
+                "distance": None,
+                "keyword_score": _keyword_score(
+                    question,
+                    document,
+                ),
+            }
+        )
 
     chunks.sort(
         key=lambda chunk: chunk["keyword_score"],
