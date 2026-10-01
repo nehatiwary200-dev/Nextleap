@@ -12,7 +12,7 @@ import chromadb
 from groq import Groq
 
 try:
-    from .config import CHROMA_PERSIST_DIR, GROQ_MODEL, TOP_K
+    from .config import CHROMA_PERSIST_DIR, CHUNKS_TXT_PATH, GROQ_MODEL, TOP_K
 except ImportError:
     from config import CHROMA_PERSIST_DIR, EMBEDDING_MODEL, GROQ_MODEL, TOP_K
 
