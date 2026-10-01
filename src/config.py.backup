@@ -13,7 +13,7 @@ CHROMA_PERSIST_DIR = PROJECT_ROOT / "chroma_db"
 CHUNKS_TXT_PATH = DATA_DIR / "chunks.txt"
 SOURCES_CSV_PATH = DATA_DIR / "sources.csv"
 
-HOST = os.getenv("HOST", "0.0.0.0")
+HOST = os.getenv("HOST", "127.0.0.1")
 PORT = int(os.getenv("PORT", "8000"))
 GROQ_MODEL = os.getenv("GROQ_MODEL", "qwen/qwen3.8-27b")
 TOP_K = int(os.getenv("TOP_K", "5"))
