@@ -127,3 +127,21 @@ Nextleap/
 └── run.py
 ```
 # Nextleap
+
+I need to preserve the last known working version of this project.
+
+Repository: Nextleap
+Known working commit: d5a590b
+Commit message: Update HDFC mutual fund FAQ assistant
+
+IMPORTANT:
+- Do NOT modify any files.
+- Do NOT reset, rebase, cherry-pick, or delete main.
+- Do NOT change the existing project.
+- Create a new Git branch named: working-version
+- The branch must point exactly to commit d5a590b.
+- Push the new branch to origin on GitHub.
+- Verify that working-version points to d5a590b.
+- Then show me the GitHub URL for the new working-version branch.
+
+Do only this preservation task.
