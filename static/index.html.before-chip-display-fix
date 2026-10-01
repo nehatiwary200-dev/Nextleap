@@ -635,15 +635,14 @@
         return payload;
       }
 
-      async function submit(questionText, displayText = null) {
+      async function submit(questionText) {
         const text = questionText.trim();
-        const display = (displayText || text).trim();
         if (!text || send.disabled) return;
 
         let current = chats.find(chatItem => chatItem.id === currentId);
         if (!current) current = createChat(text.length > 34 ? `${text.slice(0, 34)}…` : text);
 
-        const userMessage = { role: "user", text: display };
+        const userMessage = { role: "user", text };
         current.messages.push(userMessage);
         question.value = "";
         resizeInput();
@@ -711,8 +710,7 @@
       document.querySelectorAll(".chip").forEach(chip => {
         chip.addEventListener("click", () => {
           const label = (chip.textContent || "").trim();
-          const fullQuestion = chipQuestions[label] || label;
-          submit(fullQuestion, label);
+          submit(chipQuestions[label] || label);
         });
       });
 

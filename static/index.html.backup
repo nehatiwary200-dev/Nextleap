@@ -635,15 +635,14 @@
         return payload;
       }
 
-      async function submit(questionText, displayText = null) {
+      async function submit(questionText) {
         const text = questionText.trim();
-        const display = (displayText || text).trim();
         if (!text || send.disabled) return;
 
         let current = chats.find(chatItem => chatItem.id === currentId);
         if (!current) current = createChat(text.length > 34 ? `${text.slice(0, 34)}…` : text);
 
-        const userMessage = { role: "user", text: display };
+        const userMessage = { role: "user", text };
         current.messages.push(userMessage);
         question.value = "";
         resizeInput();
@@ -701,19 +700,8 @@
       question.addEventListener("input", resizeInput);
       question.addEventListener("paste", () => requestAnimationFrame(resizeInput));
 
-      const chipQuestions = {
-        "Minimum SIP?": "What is the minimum SIP for HDFC Large Cap Fund?",
-        "Fund size?": "What is the fund size of HDFC Large Cap Fund?",
-        "Risk level?": "What is the risk level of HDFC Large Cap Fund?",
-        "Benchmark?": "What is the benchmark of HDFC Large Cap Fund?"
-      };
-
       document.querySelectorAll(".chip").forEach(chip => {
-        chip.addEventListener("click", () => {
-          const label = (chip.textContent || "").trim();
-          const fullQuestion = chipQuestions[label] || label;
-          submit(fullQuestion, label);
-        });
+        chip.addEventListener("click", () => submit(chip.textContent || ""));
       });
 
       $("newChat").addEventListener("click", newChat);
