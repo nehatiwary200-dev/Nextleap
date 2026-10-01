@@ -60,7 +60,10 @@ def ask(request: AskRequest) -> AskResponse:
             is_refusal=result.get("is_refusal", False),
         )
     except Exception as exc:
+        import traceback
+        print("API ERROR:", repr(exc), flush=True)
+        traceback.print_exc()
         raise HTTPException(
             status_code=500,
-            detail="The assistant could not process this request. Check the server configuration and ingestion state.",
+            detail=f"Assistant error: {type(exc).__name__}: {exc}",
         ) from exc
