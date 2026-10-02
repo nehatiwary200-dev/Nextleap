@@ -1,4 +1,4 @@
-# HDFC Mutual Fund FAQ Assistant
+# Groww - HDFC Mutual Fund FAQ Assistant
 
 A facts-only RAG chatbot for the five HDFC Mutual Fund schemes defined in the project data. The frontend follows the attached dark FAQ/chat UI reference, while the backend exposes one clean `/api/ask` path for retrieval + generation.
 
@@ -126,22 +126,34 @@ Nextleap/
 ├── .gitignore
 └── run.py
 ```
+
 # Nextleap
 
-I need to preserve the last known working version of this project.
 
-Repository: Nextleap
-Known working commit: d5a590b
-Commit message: Update HDFC mutual fund FAQ assistant
+## Source List
 
-IMPORTANT:
-- Do NOT modify any files.
-- Do NOT reset, rebase, cherry-pick, or delete main.
-- Do NOT change the existing project.
-- Create a new Git branch named: working-version
-- The branch must point exactly to commit d5a590b.
-- Push the new branch to origin on GitHub.
-- Verify that working-version points to d5a590b.
-- Then show me the GitHub URL for the new working-version branch.
+The assistant uses the following public Groww pages as its source data:
 
-Do only this preservation task.
+1. **HDFC Large Cap Fund Direct Growth**  
+   https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+
+2. **HDFC Flexi Cap Direct Plan Growth**  
+   https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+
+3. **HDFC ELSS Tax Saver Fund Direct Plan Growth**  
+   https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+
+4. **HDFC Small Cap Fund Direct Growth**  
+   https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth
+
+5. **HDFC Balanced Advantage Fund Direct Growth**  
+   https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth
+
+
+## Disclaimer
+
+This project is a demonstration FAQ assistant and provides facts from the project's stored source data. The information is static project data extracted from public Groww pages as of **25 September 2026** and is not live market or NAV/AUM data.
+
+The assistant is intended for informational purposes only and does **not** provide personalized investment advice, recommendations, or guarantees of returns. Users should verify current information from official fund documents and consult a qualified financial professional before making investment decisions.
+
+
